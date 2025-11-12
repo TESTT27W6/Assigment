@@ -1,0 +1,110 @@
+-- LocalScript: Auto-hide players 6s after client-sided 0 health or disconnected body
+-- Fully client-sided — server and other players unaffected
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+-- Function: Hide the player's character locally
+local function hidePlayerLocally(player)
+	if not player.Character then return end
+
+	for _, obj in ipairs(player.Character:GetDescendants()) do
+		if obj:IsA("BasePart") then
+			obj.LocalTransparencyModifier = 1
+		elseif obj:IsA("Decal") then
+			obj.Transparency = 1
+		elseif obj:IsA("ParticleEmitter") or obj:IsA("Beam") then
+			obj.Enabled = false
+		elseif obj:IsA("BillboardGui") or obj:IsA("SurfaceGui") then
+			obj.Enabled = false
+		end
+	end
+
+	local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+	end
+end
+
+-- Tracking
+local pendingHide = {}
+local hiddenPlayers = {}
+
+-- Helper: Check if a player's body appears "broken apart" client-side
+local function isBodyBroken(player)
+	local char = player.Character
+	if not char then return false end
+
+	-- Count essential parts
+	local torso = char:FindFirstChild("UpperTorso") or char:FindFirstChild("Torso")
+	local head = char:FindFirstChild("Head")
+	local root = char:FindFirstChild("HumanoidRootPart")
+
+	-- If one of these is missing, the body is likely broken apart
+	if not torso or not head or not root then
+		return true
+	end
+
+	-- Or if total body parts < 5, assume destroyed
+	local partCount = 0
+	for _, obj in ipairs(char:GetChildren()) do
+		if obj:IsA("BasePart") then
+			partCount += 1
+		end
+	end
+	return partCount < 5
+end
+
+-- Loop: detect client-sided fake deaths
+RunService.RenderStepped:Connect(function()
+	for _, player in ipairs(Players:GetPlayers()) do
+		if player ~= LocalPlayer and player.Character then
+			local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				local fakeDead = humanoid.Health <= 0 or isBodyBroken(player)
+
+				if fakeDead and not hiddenPlayers[player] and not pendingHide[player] then
+					-- Wait 6 seconds before hiding
+					pendingHide[player] = true
+					delay(6, function()
+						-- Recheck before hiding
+						if player.Character and humanoid and (humanoid.Health <= 0 or isBodyBroken(player)) then
+							hidePlayerLocally(player)
+							hiddenPlayers[player] = true
+							print("[Client] "..player.Name.." hidden after 6s (fake death detected)")
+						end
+						pendingHide[player] = nil
+					end)
+				elseif not fakeDead and hiddenPlayers[player] then
+					-- Reset if revived or respawned
+					hiddenPlayers[player] = nil
+				end
+			end
+		end
+	end
+end)
+
+-- 💬 Hide chat from hidden players
+local function hideChatForPlayer(player)
+	player.Chatted:Connect(function()
+		if hiddenPlayers[player] then
+			-- Remove their messages from your chat GUI
+			task.defer(function()
+				for _, descendant in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+					if descendant:IsA("TextLabel") and descendant.Text:find(player.Name) then
+						descendant.Visible = false
+					end
+				end
+			end)
+		end
+	end)
+end
+
+-- Connect chat filter for existing + future players
+for _, plr in ipairs(Players:GetPlayers()) do
+	if plr ~= LocalPlayer then
+		hideChatForPlayer(plr)
+	end
+end
+Players.PlayerAdded:Connect(hideChatForPlayer)
