@@ -1,0 +1,124 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- tool
+local tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Pootis"
+tool.Parent = player.Backpack
+
+tool.Activated:Connect(function() -- ClickScreen Function
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+    local Character = plr.Character or plr.CharacterAdded:Wait()
+    local Torso = Character:FindFirstChild("Torso") or Character:FindFirstChild("UpperTorso") or Character:WaitForChild("HumanoidRootPart")
+    -- shoot part in that direction
+    local size=0.5
+    local mode=1
+    color=BrickColor.new(Color3.new(math.random(),math.random(),math.random())) 
+    mo=Instance.new("Model") 
+    mo.Name="EEEEUGH HA HA HAAAAA" 
+    mo.Parent=workspace 
+    game.Debris:AddItem(mo,10)
+    p=Instance.new("Seat") 
+    p.Name="Torso" 
+    p.Size=Vector3.new(14,50,14)*size
+    p.BrickColor=color
+    m=Instance.new("SpecialMesh") 
+    m.Parent=p 
+    p.Name="Torso" 
+    p.Parent=mo 
+    p=Instance.new("Seat") 
+    p.Shape="Ball" 
+    p.Size=Vector3.new(24,24,24)*size
+    p.BrickColor=color
+    p.Name="Legball" 
+    for i=1, 10 do 
+        lol=Instance.new("Seat") 
+        lol.BrickColor=BrickColor:Black() 
+        lol.Name="SEE?" 
+        lol.Parent=mo 
+        lol.Size=Vector3.new(1,math.random(30,40),1) *size
+        w=Instance.new("Weld") 
+        w.Part0=p 
+        w.Part1=lol 
+        w.C0=CFrame.new(0,0,0)*CFrame.fromEulerAnglesXYZ(math.random(-10,10),math.random(-10,10),math.random(-10,10)) 
+        w.Parent=w.Part0 
+    end 
+    p.Parent=mo 
+    w=Instance.new("Weld") 
+    w.Part0=mo.Torso 
+    w.Part1=p 
+    w.C0=CFrame.new(16*(size/2),-48*(size/2),0) 
+    w.Parent=w.Part0 
+    p=Instance.new("Seat") 
+    p.Shape="Ball" 
+    p.Size=Vector3.new(24,24,24)*size
+    p.BrickColor=color
+    p.Name="Legball" 
+    for i=1, 10 do 
+        lol=Instance.new("Seat") 
+        lol.BrickColor=BrickColor:Black() 
+        lol.Name="SEE?" 
+        lol.Parent=mo 
+        lol.Size=Vector3.new(1,math.random(30,40),1) *size
+        w=Instance.new("Weld") 
+        w.Part0=p 
+        w.Part1=lol 
+        w.C0=CFrame.new(0,0,0)*CFrame.fromEulerAnglesXYZ(math.random(-10,10),math.random(-10,10),math.random(-10,10)) 
+        w.Parent=w.Part0 
+    end 
+    p.Parent=mo 
+    w=Instance.new("Weld") 
+    w.Part0=mo.Torso 
+    w.Part1=p 
+    w.C0=CFrame.new(-16*(size/2),-48*(size/2),0) 
+    w.Parent=w.Part0 
+    p=Instance.new("Seat") 
+    p.Shape="Ball" 
+    p.Size=Vector3.new(21,15,21)*size
+    p.BrickColor=color
+    p.Name="Legball" 
+    for i=1, 10 do 
+        lol=Instance.new("Seat") 
+        lol.BrickColor=BrickColor:Black() 
+        lol.Name="SEE?" 
+        lol.Parent=mo 
+        lol.Size=Vector3.new(1,math.random(30,40),1) *size
+        w=Instance.new("Weld") 
+        w.Part0=p 
+        w.Part1=lol 
+        w.C0=CFrame.new(0,0,0)*CFrame.fromEulerAnglesXYZ(math.random(-10,10),math.random(-10,10),math.random(-10,10)) 
+        w.Parent=w.Part0 
+    end 
+    p.Parent=mo 
+    w=Instance.new("Weld") 
+    w.Part0=mo.Torso 
+    w.Part1=p 
+    w.C0=CFrame.new(0,60*(size/2),0) 
+    m=Instance.new("SpecialMesh") 
+    m.Parent=p 
+    p.Name="Head" 
+    w.Parent=w.Part0
+    mo.Torso.CFrame=mo.Torso.CFrame*Torso.CFrame*CFrame.new(0,0,-50*size)*CFrame.fromEulerAnglesXYZ(-1.57,0,0)
+    local mouseLookVector = (mouse.Hit.p - Torso.Position).Unit
+    local speed = 500
+    mo.Torso.Velocity = Vector3.new(speed,speed,speed) * mouseLookVector
+    s=Instance.new("Sound")
+    s.Parent=mo.Torso
+    s.Volume=100
+    s.Pitch=1
+    s.SoundId="http://www.roblox.com/asset/?id=136588061441474"
+    s.Looped=false
+    s:play()
+    coroutine.resume(coroutine.create(function(Part)
+        while true do
+            wait(math.random(0,1)+math.random())
+            Part.RotVelocity=Vector3.new(math.random(-40,40),math.random(-40,40),math.random(-40,40))
+            --Part.RotVelocity=Vector3.new(math.random(-5,5),math.random(-5,5),math.random(-5,5)) 
+        end
+    end),mo.Torso)
+    mo.Torso.CFrame = CFrame.new(mo.Torso.Position) * CFrame.Angles(90,0,0) + Vector3.new(0,15,0)
+
+end)

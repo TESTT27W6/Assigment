@@ -1,0 +1,844 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local VERYREALANDCOOLMYSTICXDXD = Instance.new("ScreenGui")
+local HealthGui = Instance.new("ScreenGui")
+local Run = Instance.new("Frame")
+local Run_2 = Instance.new("TextButton")
+local BG = Instance.new("Frame")
+local HP = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Health = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local MP = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local Ki = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local XP = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local XP_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local Name = Instance.new("ImageLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local GUI = Instance.new("ScreenGui")
+local Chats = Instance.new("Frame")
+local ArcMusicPlayer = Instance.new("ScreenGui")
+local SoundButton = Instance.new("ImageButton")
+local ChangeArc = Instance.new("ScreenGui")
+local Frame_4 = Instance.new("Frame")
+local Toggle = Instance.new("TextButton")
+local Stuff = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Title = Instance.new("TextLabel")
+local ChangeTemplate = Instance.new("Frame")
+local ArcName = Instance.new("TextLabel")
+local Change = Instance.new("TextButton")
+local Title_2 = Instance.new("TextLabel")
+local ArcToggler = Instance.new("Frame")
+local Toggle_2 = Instance.new("TextButton")
+local ArcMoves = Instance.new("Frame")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local Title_3 = Instance.new("TextLabel")
+local MoveTemplate = Instance.new("Frame")
+local Attack = Instance.new("TextLabel")
+local Learn = Instance.new("TextButton")
+local Level = Instance.new("TextLabel")
+local Mystic = Instance.new("ScreenGui")
+local Frame_5 = Instance.new("Frame")
+local Mystic_2 = Instance.new("TextButton")
+local Stuff_2 = Instance.new("Frame")
+local Title_4 = Instance.new("TextLabel")
+local ScrollingFrame_3 = Instance.new("ScrollingFrame")
+local MysticTransporation = Instance.new("Frame")
+local Learn_2 = Instance.new("TextButton")
+local Attack_2 = Instance.new("TextLabel")
+local Level_2 = Instance.new("TextLabel")
+local MysticCannon = Instance.new("Frame")
+local Attack_3 = Instance.new("TextLabel")
+local Learn_3 = Instance.new("TextButton")
+local Level_3 = Instance.new("TextLabel")
+local MysticTransformation = Instance.new("Frame")
+local Learn_4 = Instance.new("TextButton")
+local Attack_4 = Instance.new("TextLabel")
+local Level_4 = Instance.new("TextLabel")
+local MysticAnnihilation = Instance.new("Frame")
+local Learn_5 = Instance.new("TextButton")
+local Attack_5 = Instance.new("TextLabel")
+local Level_5 = Instance.new("TextLabel")
+local MysticBreath = Instance.new("Frame")
+local Attack_6 = Instance.new("TextLabel")
+local Learn_6 = Instance.new("TextButton")
+local Level_6 = Instance.new("TextLabel")
+
+--Properties:
+
+VERYREALANDCOOLMYSTICXDXD.Name = "VERY REAL AND COOL MYSTIC XDXD"
+VERYREALANDCOOLMYSTICXDXD.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+VERYREALANDCOOLMYSTICXDXD.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+HealthGui.Name = "HealthGui"
+HealthGui.Parent = VERYREALANDCOOLMYSTICXDXD
+
+Run.Name = "Run"
+Run.Parent = HealthGui
+Run.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Run.BackgroundTransparency = 1.000
+Run.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Run.Position = UDim2.new(0.5, -439, 1, -235)
+Run.Size = UDim2.new(0, 130, 0, 25)
+
+Run_2.Name = "Run"
+Run_2.Parent = Run
+Run_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Run_2.BackgroundTransparency = 0.700
+Run_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Run_2.BorderSizePixel = 3
+Run_2.Size = UDim2.new(1, 0, 1, 0)
+Run_2.Font = Enum.Font.SourceSansBold
+Run_2.Text = "Run(Shift)"
+Run_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Run_2.TextSize = 12.000
+Run_2.TextStrokeTransparency = 0.000
+
+BG.Name = "BG"
+BG.Parent = HealthGui
+BG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BG.BackgroundTransparency = 0.700
+BG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BG.BorderSizePixel = 2
+BG.Position = UDim2.new(0.5, -650, 1, -200)
+BG.Size = UDim2.new(0, 500, 0, 110)
+
+HP.Name = "HP"
+HP.Parent = HealthGui
+HP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HP.BackgroundTransparency = 1.000
+HP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HP.BorderSizePixel = 2
+HP.Position = UDim2.new(0.5, -650, 1, -180)
+HP.Size = UDim2.new(0, 500, 0, 70)
+HP.ZIndex = 2
+
+TextLabel.Parent = HP
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Position = UDim2.new(0, 25, 0, 10)
+TextLabel.Size = UDim2.new(0, 450, 0, 10)
+TextLabel.ZIndex = 3
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Health[2600 / 2600]"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+TextLabel.TextStrokeTransparency = 0.000
+
+Health.Name = "Health"
+Health.Parent = HP
+Health.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Health.BackgroundTransparency = 0.300
+Health.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Health.BorderSizePixel = 3
+Health.Position = UDim2.new(0, 25, 0, 10)
+Health.Size = UDim2.new(0, 450, 0, 10)
+Health.ZIndex = 2
+
+Frame.Parent = Health
+Frame.BackgroundColor3 = Color3.fromRGB(0, 116, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Size = UDim2.new(1, 0, 1, 0)
+Frame.ZIndex = 2
+
+MP.Name = "MP"
+MP.Parent = HealthGui
+MP.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+MP.BackgroundTransparency = 1.000
+MP.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MP.Position = UDim2.new(0.5, -650, 1, -180)
+MP.Size = UDim2.new(0, 500, 0, 70)
+MP.ZIndex = 2
+
+TextLabel_2.Parent = MP
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.Position = UDim2.new(0, 25, 0, 30)
+TextLabel_2.Size = UDim2.new(0, 400, 0, 10)
+TextLabel_2.ZIndex = 3
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Arc Energy[2650 / 2650]"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 18.000
+TextLabel_2.TextStrokeTransparency = 0.000
+
+Ki.Name = "Ki"
+Ki.Parent = MP
+Ki.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Ki.BackgroundTransparency = 0.300
+Ki.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ki.BorderSizePixel = 3
+Ki.Position = UDim2.new(0, 25, 0, 30)
+Ki.Size = UDim2.new(0, 400, 0, 10)
+Ki.ZIndex = 2
+
+Frame_2.Parent = Ki
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 108, 190)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.Size = UDim2.new(1, 0, 1, 0)
+Frame_2.ZIndex = 2
+
+XP.Name = "XP"
+XP.Parent = HealthGui
+XP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+XP.BackgroundTransparency = 1
+XP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+XP.Position = UDim2.new(0.5, -650, 1, -180)
+XP.Size = UDim2.new(0, 500, 0, 70)
+XP.ZIndex = 2
+
+TextLabel_3.Parent = XP
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_3.Position = UDim2.new(0, 25, 0, 50)
+TextLabel_3.Size = UDim2.new(0, 350, 0, 10)
+TextLabel_3.ZIndex = 3
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Experience[0 / 5000]"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 18.000
+TextLabel_3.TextStrokeTransparency = 0.000
+
+XP_2.Name = "XP"
+XP_2.Parent = XP
+XP_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+XP_2.BackgroundTransparency = 0.3
+XP_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+XP_2.BorderSizePixel = 3
+XP_2.Position = UDim2.new(0, 25, 0, 50)
+XP_2.Size = UDim2.new(0, 350, 0, 10)
+XP_2.ZIndex = 2
+
+Frame_3.Parent = XP_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BackgroundTransparency = 0.3
+Frame_3.Size = UDim2.new(1, 0, 1, 0)
+Frame_3.ZIndex = 2
+
+Name.Name = "Name"
+Name.Parent = HealthGui
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Name.Position = UDim2.new(0.5, -680, 1, -210)
+Name.Size = UDim2.new(0, 130, 0, 130)
+Name.ZIndex = 3
+Name.Image = "http://www.roblox.com/asset/?id=204702494"
+Name.ImageColor3 = Color3.fromRGB(255, 115, 0)
+
+TextLabel_4.Parent = Name
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_4.Position = UDim2.new(0, 15, 0, 40)
+TextLabel_4.Size = UDim2.new(0, 100, 0, 50)
+TextLabel_4.ZIndex = 4
+TextLabel_4.Font = Enum.Font.ArialBold
+TextLabel_4.Text = "Level 100"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 18.000
+TextLabel_4.TextStrokeTransparency = 0.000
+
+GUI.Name = "GUI"
+GUI.Parent = VERYREALANDCOOLMYSTICXDXD
+
+Chats.Name = "Chats"
+Chats.Parent = GUI
+Chats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Chats.BackgroundTransparency = 1.000
+Chats.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Chats.Position = UDim2.new(0, 0, 0.0384615362, 0)
+Chats.Size = UDim2.new(1, 0, 1, 0)
+Chats.ZIndex = 9
+
+ArcMusicPlayer.Name = "ArcMusicPlayer"
+ArcMusicPlayer.Parent = VERYREALANDCOOLMYSTICXDXD
+
+SoundButton.Name = "SoundButton"
+SoundButton.Parent = ArcMusicPlayer
+SoundButton.BackgroundTransparency = 1.000
+SoundButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SoundButton.Position = UDim2.new(0, 64, 1, -49)
+SoundButton.Size = UDim2.new(0, 42, 0, 40)
+SoundButton.ZIndex = 10
+SoundButton.Image = "rbxassetid://202193237"
+SoundButton.ImageColor3 = Color3.fromRGB(120, 120, 120)
+SoundButton.ImageTransparency = 0.300
+
+ChangeArc.Name = "ChangeArc"
+ChangeArc.Parent = VERYREALANDCOOLMYSTICXDXD
+
+Frame_4.Parent = ChangeArc
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BackgroundTransparency = 1.000
+Frame_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame_4.Position = UDim2.new(0.5, -300, 1, -235)
+Frame_4.Size = UDim2.new(0, 150, 0, 25)
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Frame_4
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BackgroundTransparency = 0.700
+Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BorderSizePixel = 3
+Toggle.Size = UDim2.new(1, 0, 1, 0)
+Toggle.Font = Enum.Font.SourceSansBold
+Toggle.Text = "Change Arc"
+Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.TextSize = 12.000
+Toggle.TextStrokeTransparency = 0.000
+Toggle.MouseButton1Click:Connect(function()
+    Stuff.Visible = not Stuff.Visible
+end)
+
+Stuff.Name = "Stuff"
+Stuff.Parent = ChangeArc
+Stuff.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Stuff.BackgroundTransparency = 1.000
+Stuff.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stuff.BorderSizePixel = 3
+Stuff.Position = UDim2.new(0.5, -200, 0.5, -200)
+Stuff.Size = UDim2.new(0, 300, 0, 300)
+Stuff.Visible = false
+
+ScrollingFrame.Parent = Stuff
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+ScrollingFrame.BackgroundTransparency = 0.100
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 3
+ScrollingFrame.Position = UDim2.new(0, 0, 0, 53)
+ScrollingFrame.Size = UDim2.new(0, 400, 0, 200)
+ScrollingFrame.BottomImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame.MidImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame.ScrollBarThickness = 15
+ScrollingFrame.TopImage = "rbxasset://textures/blackBkg_square.png"
+
+Title.Name = "Title"
+Title.Parent = Stuff
+Title.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+Title.BackgroundTransparency = 0.100
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 3
+Title.Size = UDim2.new(0, 400, 0, 50)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Change Arc"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 18.000
+Title.TextStrokeTransparency = 0.000
+
+ChangeTemplate.Name = "ChangeTemplate"
+ChangeTemplate.Parent = Stuff
+ChangeTemplate.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+ChangeTemplate.BackgroundTransparency = 0.100
+ChangeTemplate.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ChangeTemplate.BorderSizePixel = 2
+ChangeTemplate.Position = UDim2.new(0, 0, 0, 5)
+ChangeTemplate.Size = UDim2.new(0, 382, 0, 40)
+ChangeTemplate.Visible = false
+
+ArcName.Name = "ArcName"
+ArcName.Parent = ChangeTemplate
+ArcName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ArcName.BackgroundTransparency = 1.000
+ArcName.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ArcName.Position = UDim2.new(0, 70, 0, 0)
+ArcName.Size = UDim2.new(0, 150, 0, 40)
+ArcName.Font = Enum.Font.SourceSans
+ArcName.Text = "Fire"
+ArcName.TextColor3 = Color3.fromRGB(243, 255, 0)
+ArcName.TextSize = 14.000
+ArcName.TextStrokeTransparency = 0.000
+
+Change.Name = "Change"
+Change.Parent = ChangeTemplate
+Change.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Change.BackgroundTransparency = 0.100
+Change.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Change.BorderSizePixel = 2
+Change.Position = UDim2.new(0, 200, 0, 4)
+Change.Size = UDim2.new(0, 100, 0, 32)
+Change.Font = Enum.Font.SourceSans
+Change.Text = "Change"
+Change.TextColor3 = Color3.fromRGB(24, 152, 33)
+Change.TextSize = 14.000
+Change.TextStrokeTransparency = 0.000
+
+Title_2.Name = "Title"
+Title_2.Parent = ChangeTemplate
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.Size = UDim2.new(0, 100, 0, 40)
+Title_2.Font = Enum.Font.SourceSans
+Title_2.Text = "Arc"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 14.000
+Title_2.TextStrokeTransparency = 0.000
+
+ArcToggler.Name = "ArcToggler"
+ArcToggler.Parent = ChangeArc
+ArcToggler.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ArcToggler.BackgroundTransparency = 1.000
+ArcToggler.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ArcToggler.Position = UDim2.new(0.5, -650, 1, -235)
+ArcToggler.Size = UDim2.new(0, 200, 0, 25)
+ArcToggler.Visible = false
+
+Toggle_2.Name = "Toggle"
+Toggle_2.Parent = ArcToggler
+Toggle_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_2.BackgroundTransparency = 0.700
+Toggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_2.BorderSizePixel = 3
+Toggle_2.Size = UDim2.new(1, 0, 1, 0)
+Toggle_2.Font = Enum.Font.SourceSansBold
+Toggle_2.Text = "Open Arc"
+Toggle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle_2.TextSize = 12.000
+Toggle_2.TextStrokeTransparency = 0.000
+
+ArcMoves.Name = "ArcMoves"
+ArcMoves.Parent = ChangeArc
+ArcMoves.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+ArcMoves.BackgroundTransparency = 1.000
+ArcMoves.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ArcMoves.BorderSizePixel = 3
+ArcMoves.Position = UDim2.new(0.5, -200, 0.5, -200)
+ArcMoves.Size = UDim2.new(0, 300, 0, 300)
+ArcMoves.Visible = false
+
+ScrollingFrame_2.Parent = ArcMoves
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+ScrollingFrame_2.BackgroundTransparency = 0.100
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 3
+ScrollingFrame_2.Position = UDim2.new(0, 0, 0, 53)
+ScrollingFrame_2.Size = UDim2.new(0, 400, 0, 200)
+ScrollingFrame_2.BottomImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame_2.MidImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame_2.ScrollBarThickness = 15
+ScrollingFrame_2.TopImage = "rbxasset://textures/blackBkg_square.png"
+
+Title_3.Name = "Title"
+Title_3.Parent = ArcMoves
+Title_3.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+Title_3.BackgroundTransparency = 0.100
+Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_3.BorderSizePixel = 3
+Title_3.Size = UDim2.new(0, 400, 0, 50)
+Title_3.Font = Enum.Font.SourceSansBold
+Title_3.Text = "Arc Name"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 18.000
+Title_3.TextStrokeTransparency = 0.000
+
+MoveTemplate.Name = "MoveTemplate"
+MoveTemplate.Parent = ChangeArc
+MoveTemplate.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+MoveTemplate.BackgroundTransparency = 0.100
+MoveTemplate.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MoveTemplate.BorderSizePixel = 2
+MoveTemplate.Position = UDim2.new(0, 0, 0, 5)
+MoveTemplate.Size = UDim2.new(0, 382, 0, 40)
+MoveTemplate.Visible = false
+
+Attack.Name = "Attack"
+Attack.Parent = MoveTemplate
+Attack.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Attack.BackgroundTransparency = 1.000
+Attack.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Attack.Position = UDim2.new(0, 70, 0, 0)
+Attack.Size = UDim2.new(0, 150, 0, 40)
+Attack.Font = Enum.Font.SourceSans
+Attack.Text = "Fireball"
+Attack.TextColor3 = Color3.fromRGB(243, 255, 0)
+Attack.TextSize = 14.000
+Attack.TextStrokeTransparency = 0.000
+
+Learn.Name = "Learn"
+Learn.Parent = MoveTemplate
+Learn.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Learn.BackgroundTransparency = 0.100
+Learn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Learn.BorderSizePixel = 2
+Learn.Position = UDim2.new(0, 200, 0, 4)
+Learn.Size = UDim2.new(0, 100, 0, 32)
+Learn.Font = Enum.Font.SourceSans
+Learn.Text = "Learn"
+Learn.TextColor3 = Color3.fromRGB(24, 152, 33)
+Learn.TextSize = 14.000
+Learn.TextStrokeTransparency = 0.000
+
+Level.Name = "Level"
+Level.Parent = MoveTemplate
+Level.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level.BackgroundTransparency = 1.000
+Level.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Level.Size = UDim2.new(0, 100, 0, 40)
+Level.Font = Enum.Font.SourceSans
+Level.Text = "Move"
+Level.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level.TextSize = 14.000
+Level.TextStrokeTransparency = 0.000
+
+Mystic.Name = "Mystic"
+Mystic.Parent = VERYREALANDCOOLMYSTICXDXD
+
+Frame_5.Parent = Mystic
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BackgroundTransparency = 1.000
+Frame_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame_5.Position = UDim2.new(0.5, -650, 1, -305)
+Frame_5.Size = UDim2.new(0, 200, 0, 25)
+
+Mystic_2.Name = "Mystic"
+Mystic_2.Parent = Frame_5
+Mystic_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Mystic_2.BackgroundTransparency = 0.700
+Mystic_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mystic_2.BorderSizePixel = 3
+Mystic_2.Position = UDim2.new(0, 0, 2.79999995, 0)
+Mystic_2.Size = UDim2.new(1, 0, 1, 0)
+Mystic_2.Font = Enum.Font.SourceSansBold
+Mystic_2.Text = "Mystic"
+Mystic_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mystic_2.TextSize = 12.000
+Mystic_2.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Mystic_2.TextStrokeTransparency = 0.000
+Mystic_2.Visible = true
+Mystic_2.MouseButton1Click:Connect(function()
+    Stuff_2.Visible = not Stuff_2.Visible
+end)
+
+Stuff_2.Name = "Stuff"
+Stuff_2.Parent = Mystic
+Stuff_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Stuff_2.BackgroundTransparency = 1.000
+Stuff_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stuff_2.BorderSizePixel = 3
+Stuff_2.Position = UDim2.new(0.5, -200, 0.5, -200)
+Stuff_2.Size = UDim2.new(0, 300, 0, 300)
+Stuff_2.Visible = false
+
+Title_4.Name = "Title"
+Title_4.Parent = Stuff_2
+Title_4.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+Title_4.BackgroundTransparency = 0.100
+Title_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.BorderSizePixel = 3
+Title_4.Size = UDim2.new(0, 400, 0, 50)
+Title_4.Font = Enum.Font.SourceSansBold
+Title_4.Text = "Arc of the Mystic"
+Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.TextSize = 18.000
+Title_4.TextStrokeTransparency = 0.000
+
+ScrollingFrame_3.Parent = Stuff_2
+ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+ScrollingFrame_3.BackgroundTransparency = 0.100
+ScrollingFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_3.BorderSizePixel = 3
+ScrollingFrame_3.Position = UDim2.new(0, 0, 0, 53)
+ScrollingFrame_3.Selectable = false
+ScrollingFrame_3.Size = UDim2.new(0, 400, 0, 200)
+ScrollingFrame_3.BottomImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame_3.MidImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame_3.ScrollBarThickness = 15
+ScrollingFrame_3.TopImage = "rbxasset://textures/blackBkg_square.png"
+
+MysticTransporation.Name = "Mystic Transporation"
+MysticTransporation.Parent = ScrollingFrame_3
+MysticTransporation.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+MysticTransporation.BackgroundTransparency = 0.100
+MysticTransporation.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MysticTransporation.BorderSizePixel = 2
+MysticTransporation.Position = UDim2.new(0, 0, 0, 52)
+MysticTransporation.Size = UDim2.new(0, 382, 0, 40)
+
+Learn_2.Name = "Learn"
+Learn_2.Parent = MysticTransporation
+Learn_2.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Learn_2.BackgroundTransparency = 0.100
+Learn_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Learn_2.BorderSizePixel = 2
+Learn_2.Position = UDim2.new(0, 200, 0, 4)
+Learn_2.Size = UDim2.new(0, 100, 0, 32)
+Learn_2.Font = Enum.Font.SourceSans
+Learn_2.Text = "Learn"
+Learn_2.TextColor3 = Color3.fromRGB(24, 152, 33)
+Learn_2.TextSize = 14.000
+Learn_2.TextStrokeTransparency = 0.000
+
+Attack_2.Name = "Attack"
+Attack_2.Parent = MysticTransporation
+Attack_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Attack_2.BackgroundTransparency = 1.000
+Attack_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Attack_2.Position = UDim2.new(0, 60, 0, 0)
+Attack_2.Size = UDim2.new(0, 150, 0, 40)
+Attack_2.Font = Enum.Font.SourceSans
+Attack_2.Text = "Mystic Transportation"
+Attack_2.TextColor3 = Color3.fromRGB(243, 255, 0)
+Attack_2.TextSize = 14.000
+Attack_2.TextStrokeTransparency = 0.000
+
+Level_2.Name = "Level"
+Level_2.Parent = MysticTransporation
+Level_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level_2.BackgroundTransparency = 1.000
+Level_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Level_2.Size = UDim2.new(0, 100, 0, 40)
+Level_2.Font = Enum.Font.SourceSans
+Level_2.Text = "Level 5"
+Level_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level_2.TextSize = 14.000
+Level_2.TextStrokeTransparency = 0.000
+
+MysticCannon.Name = "Mystic Cannon"
+MysticCannon.Parent = ScrollingFrame_3
+MysticCannon.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+MysticCannon.BackgroundTransparency = 0.100
+MysticCannon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MysticCannon.BorderSizePixel = 2
+MysticCannon.Position = UDim2.new(0, 0, 0, 5)
+MysticCannon.Size = UDim2.new(0, 382, 0, 40)
+
+Attack_3.Name = "Attack"
+Attack_3.Parent = MysticCannon
+Attack_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Attack_3.BackgroundTransparency = 1.000
+Attack_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Attack_3.Position = UDim2.new(0, 60, 0, 0)
+Attack_3.Size = UDim2.new(0, 150, 0, 40)
+Attack_3.Font = Enum.Font.SourceSans
+Attack_3.Text = "Mystic Cannon"
+Attack_3.TextColor3 = Color3.fromRGB(243, 255, 0)
+Attack_3.TextSize = 18.000
+Attack_3.TextStrokeTransparency = 0.000
+Attack_3.TextWrapped = true
+
+Learn_3.Name = "Learn"
+Learn_3.Parent = MysticCannon
+Learn_3.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Learn_3.BackgroundTransparency = 0.100
+Learn_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Learn_3.BorderSizePixel = 2
+Learn_3.Position = UDim2.new(0, 200, 0, 4)
+Learn_3.Size = UDim2.new(0, 100, 0, 32)
+Learn_3.Font = Enum.Font.SourceSans
+Learn_3.Text = "Learn"
+Learn_3.TextColor3 = Color3.fromRGB(24, 152, 33)
+Learn_3.TextSize = 14.000
+Learn_3.TextStrokeTransparency = 0.000
+
+Level_3.Name = "Level"
+Level_3.Parent = MysticCannon
+Level_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level_3.BackgroundTransparency = 1.000
+Level_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Level_3.Size = UDim2.new(0, 100, 0, 40)
+Level_3.Font = Enum.Font.SourceSans
+Level_3.Text = "Level 1"
+Level_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level_3.TextSize = 14.000
+Level_3.TextStrokeTransparency = 0.000
+
+MysticTransformation.Name = "Mystic Transformation"
+MysticTransformation.Parent = ScrollingFrame_3
+MysticTransformation.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+MysticTransformation.BackgroundTransparency = 0.100
+MysticTransformation.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MysticTransformation.BorderSizePixel = 2
+MysticTransformation.Position = UDim2.new(0, 0, 0, 99)
+MysticTransformation.Size = UDim2.new(0, 382, 0, 40)
+
+Learn_4.Name = "Learn"
+Learn_4.Parent = MysticTransformation
+Learn_4.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Learn_4.BackgroundTransparency = 0.100
+Learn_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Learn_4.BorderSizePixel = 2
+Learn_4.Position = UDim2.new(0, 200, 0, 4)
+Learn_4.Size = UDim2.new(0, 100, 0, 32)
+Learn_4.Font = Enum.Font.SourceSans
+Learn_4.Text = "Learn"
+Learn_4.TextColor3 = Color3.fromRGB(24, 152, 33)
+Learn_4.TextSize = 14.000
+Learn_4.TextStrokeTransparency = 0.000
+
+Attack_4.Name = "Attack"
+Attack_4.Parent = MysticTransformation
+Attack_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Attack_4.BackgroundTransparency = 1.000
+Attack_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Attack_4.Position = UDim2.new(0, 60, 0, 0)
+Attack_4.Size = UDim2.new(0, 150, 0, 40)
+Attack_4.Font = Enum.Font.SourceSans
+Attack_4.Text = "Mystic Transformation"
+Attack_4.TextColor3 = Color3.fromRGB(243, 255, 0)
+Attack_4.TextSize = 14.000
+Attack_4.TextStrokeTransparency = 0.000
+
+Level_4.Name = "Level"
+Level_4.Parent = MysticTransformation
+Level_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level_4.BackgroundTransparency = 1.000
+Level_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Level_4.Size = UDim2.new(0, 100, 0, 40)
+Level_4.Font = Enum.Font.SourceSans
+Level_4.Text = "Level 10"
+Level_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level_4.TextSize = 14.000
+Level_4.TextStrokeTransparency = 0.000
+
+MysticAnnihilation.Name = "Mystic Annihilation"
+MysticAnnihilation.Parent = ScrollingFrame_3
+MysticAnnihilation.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+MysticAnnihilation.BackgroundTransparency = 0.100
+MysticAnnihilation.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MysticAnnihilation.BorderSizePixel = 2
+MysticAnnihilation.Position = UDim2.new(0, 0, 0, 193)
+MysticAnnihilation.Size = UDim2.new(0, 382, 0, 40)
+
+Learn_5.Name = "Learn"
+Learn_5.Parent = MysticAnnihilation
+Learn_5.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Learn_5.BackgroundTransparency = 0.100
+Learn_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Learn_5.BorderSizePixel = 2
+Learn_5.Position = UDim2.new(0, 200, 0, 4)
+Learn_5.Size = UDim2.new(0, 100, 0, 32)
+Learn_5.Font = Enum.Font.SourceSans
+Learn_5.Text = "Learn"
+Learn_5.TextColor3 = Color3.fromRGB(24, 152, 33)
+Learn_5.TextSize = 14.000
+Learn_5.TextStrokeTransparency = 0.000
+Learn_5.MouseButton1Click:Connect(function()
+	Learn_5.Text = "Learned"
+	loadstring(game:HttpGet("https://pastefy.app/neRKdSl3/raw",true))()
+	wait(1)
+	Learn_5.Text = "Learn"
+end)
+
+Attack_5.Name = "Attack"
+Attack_5.Parent = MysticAnnihilation
+Attack_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Attack_5.BackgroundTransparency = 1.000
+Attack_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Attack_5.Position = UDim2.new(0, 60, 0, 0)
+Attack_5.Size = UDim2.new(0, 150, 0, 40)
+Attack_5.Font = Enum.Font.SourceSans
+Attack_5.Text = "Mystic Annihilation"
+Attack_5.TextColor3 = Color3.fromRGB(243, 255, 0)
+Attack_5.TextSize = 14.000
+Attack_5.TextStrokeTransparency = 0.000
+
+Level_5.Name = "Level"
+Level_5.Parent = MysticAnnihilation
+Level_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level_5.BackgroundTransparency = 1.000
+Level_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Level_5.Size = UDim2.new(0, 100, 0, 40)
+Level_5.Font = Enum.Font.SourceSans
+Level_5.Text = "Level 10"
+Level_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level_5.TextSize = 14.000
+Level_5.TextStrokeTransparency = 0.000
+
+MysticBreath.Name = "Mystic Breath"
+MysticBreath.Parent = ScrollingFrame_3
+MysticBreath.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+MysticBreath.BackgroundTransparency = 0.100
+MysticBreath.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MysticBreath.BorderSizePixel = 2
+MysticBreath.Position = UDim2.new(0, 0, 0, 146)
+MysticBreath.Size = UDim2.new(0, 382, 0, 40)
+
+Attack_6.Name = "Attack"
+Attack_6.Parent = MysticBreath
+Attack_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Attack_6.BackgroundTransparency = 1.000
+Attack_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Attack_6.Position = UDim2.new(0, 70, 0, 0)
+Attack_6.Size = UDim2.new(0, 150, 0, 40)
+Attack_6.Font = Enum.Font.SourceSans
+Attack_6.Text = "Mystic Breath"
+Attack_6.TextColor3 = Color3.fromRGB(243, 255, 0)
+Attack_6.TextSize = 14.000
+Attack_6.TextStrokeTransparency = 0.000
+
+Learn_6.Name = "Learn"
+Learn_6.Parent = MysticBreath
+Learn_6.BackgroundColor3 = Color3.fromRGB(204, 204, 204)
+Learn_6.BackgroundTransparency = 0.100
+Learn_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Learn_6.BorderSizePixel = 2
+Learn_6.Position = UDim2.new(0, 200, 0, 4)
+Learn_6.Size = UDim2.new(0, 100, 0, 32)
+Learn_6.Font = Enum.Font.SourceSans
+Learn_6.Text = "Learn"
+Learn_6.TextColor3 = Color3.fromRGB(24, 152, 33)
+Learn_6.TextSize = 14.000
+Learn_6.TextStrokeTransparency = 0.000
+
+Level_6.Name = "Level"
+Level_6.Parent = MysticBreath
+Level_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level_6.BackgroundTransparency = 1.000
+Level_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Level_6.Size = UDim2.new(0, 100, 0, 40)
+Level_6.Font = Enum.Font.SourceSans
+Level_6.Text = "Level 1"
+Level_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level_6.TextSize = 14.000
+Level_6.TextStrokeTransparency = 0.000
+
+-- Scripts:
+
+local function LRSGZDF_fake_script() -- Run_2.LocalScript 
+	local script = Instance.new('LocalScript', Run_2)
+
+	player = game.Players.LocalPlayer
+	Open = false
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	function onKeyDown(key)
+		if string.byte(key) == 48 then
+		if Open == false then
+			Open = true
+			script.Parent.Text = "Walk(Shift)"
+			player.Character.Humanoid.WalkSpeed = 16 + 35
+		elseif Open == true then
+			Open = false
+			script.Parent.Text = "Run(Shift)"
+			player.Character.Humanoid.WalkSpeed = 16
+		end
+		end
+	end
+	Mouse.KeyDown:connect(onKeyDown)
+	function MouseClick()
+		if Open == false then
+			Open = true
+			script.Parent.Text = "Walk(Shift)"
+			player.Character.Humanoid.WalkSpeed = 16 + 35
+		elseif Open == true then
+			Open = false
+			script.Parent.Text = "Run(Shift)"
+			player.Character.Humanoid.WalkSpeed = 16
+		end
+		
+	end
+	script.Parent.MouseButton1Down:connect(MouseClick)
+end
+coroutine.wrap(LRSGZDF_fake_script)()
